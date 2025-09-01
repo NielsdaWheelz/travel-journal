@@ -1,19 +1,14 @@
 import Header from "./components/Header"
-import Content from "./components/Content"
+import Entry from "./components/Entry"
 import travelData from "./data.js"
 
 function App() {
 
-  const travels = travelData.map((travel) => {
+  const entries = travelData.map((entry) => {
     return (
-      <Content
-        key = {travel.id}
-        title = { travel.title }
-        img = {travel.img}
-        location = {travel.country}
-        mapLink = {travel.googleMapsLink}
-        date = {travel.dates}
-        description = {travel.text}
+      <Entry
+        key = {entry.id}
+        entry = {entry}
       />
     )
   })
@@ -21,7 +16,7 @@ function App() {
   return (
     <>
     <Header />
-    {travels}
+    {entries}
     </>
   )
 }
