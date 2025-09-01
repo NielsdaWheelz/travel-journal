@@ -1,11 +1,9 @@
-import reactLogo from "../assets/react.svg"
-
-function Content(props: {title: string, location: string, date: string, description: string, mapLink: string}) {
+function Content(props: {title: string, img: {src: string, alt: string},  location: string, date: string, description: string, mapLink: string}) {
     return(
         <article>
             <div className="content-container">
                 <div className="main-image-container">
-                    <img src={reactLogo} alt="React Logo" className="main-image" />
+                    <img src={props.img.src} alt={props.img.alt} className="main-image" />
                 </div>
                 <div className="content-text">
                     <p>{props.date}</p>
